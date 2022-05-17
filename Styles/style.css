@@ -1,52 +1,95 @@
-.header {
-    width: 100%;
-    background-color: #222831;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header div {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+body {
+
 }
-.header div a {
-    padding-left: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    text-decoration: none;
-    color: #00ffff;
-}
-.header div p {
-    display: flex;
-    padding-left: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+.nav {
+    background: #222831;
+    height: 80px;
     color: #ffffff;
 }
-.header nav {
+.nav_container {
     display: flex;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 100%;
-    justify-content: center;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
     align-items: center;
-    background-color: #393E46;
+}
+.nav_logo {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.nav_label, .nav_input {
+    display: none;
+}
+.nav_menu {
+       display: grid;
+       grid-auto-flow: column;
+       gap: 2em;
+}
+.nav_item {
+    color: #ffffff;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
     
 }
-.header nav a {
-    padding-left: 30px;
-    text-decoration: none;
-    font-size: 20px;
-    color:#ffffff;
+.nav_item:after {
+    content:"";
+    display: block;
+    background-color: #ffffff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .3s;
 }
-.login {
-    position: absolute;
-    left: 90%;
-    border: 1px solid black;
-    width: 110px;
+.nav_item:hover {
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+@media (max-width: 768px) {
+    .nav_label {
+        display: block;
+        cursor: pointer;
+    }
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: #00ADB5;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+    .nav_input:checked + .nav_menu {
+        clip-path: circle(100% at center);
+    }
+}
+@media (min-width: 1024px) {
+    .section-one {
+        display: flex;
+        width: 50%;
+        left: 0px;
+    }
+    .section-two {
+        display: flex;
+        width: 50px;
+        left: 50%;
+    }
 }
 .section-one {
     display: flex;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -54,6 +97,7 @@
 }
 .section-two {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -62,6 +106,7 @@
 }
 .section-three {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,9 +115,49 @@
 }
 .section-four {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-top: 40px;
+    padding-bottom: 40px;
+}
+.pieDePagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #00ADB5;
+}
+.pieDePagina a {
+    padding-right: 20px;
+    font-size: 1.5em;
+
+}
+
+/* HOJA DE ESTILO LOGIN */
+
+.volver {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #222831;
+}
+.volver a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #ffffff;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    font-size: 2em;
+}
+.footer_Subscripcion {
+    margin-top: 100px;
+    height: 50px;
+    background-color: #00ADB5;
 }
