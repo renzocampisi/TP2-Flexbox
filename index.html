@@ -4,60 +4,59 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="mediaQueries" href="styles/mediaQueries.css">
+        <link rel="resetSheet" href="styles/reset.css">
         <link rel="styleSheet" href="styles/style.css">
         <title>AllTechnology</title>
     </head>
     <body>
-        <header class="header">
-            <div>
-                <a href="index.html" alt="nombrePagina">AllTechnology</a>
-                <p>La tecnologia es vida</p>
-            </div>
-            <nav>
-                <a href="index.html" alt="home">HOME</a>
-                <a href="" alt="">Criptomonedas</a>
-                <a href="" alt="">Celulares</a>
-                <a href="" alt="">Computadoras</a>
-                <div class="login">
-                    <a href="login.html" alt="login">Login</a>
+        <nav class="nav">
+            <div class="nav_container">
+                <h1 class="nav_logo">AllTechnology</h1>
+                <label for="menu" class="nav_label">
+                    <img src="assets/menu.svg" class="nav_img">
+                </label>
+                <input type="checkbox" id="menu" class="nav_input">
+                <div class="nav_menu">
+                    <a href="index.html" alt="home" class="nav_item">HOME</a>
+                    <a href="#" class="nav_item">Computadoras</a>
+                    <a href="#" class="nav_item">Celulares</a>
+                    <a href="#" class="nav_item">Criptomonedas</a>
                 </div>
-            </nav>
-            
-        </header>
+            </div>
+        </nav>
         <section class="section-one">
             <div>
-                <h2>Titulo Noticia Uno</h2>
-                <img src="Images/imagenTituloUno.png" alt="PruebaFormato">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores amet blanditiis 
-                    placeat eius temporibus enim voluptatum id architecto, perferendis, eaque beatae sequi nostrum soluta. 
-                    Non consequuntur aliquid dolorem nisi.</p>
+                <h2>Macbook Pro 14 pulgadas</h2>
+                <img src="Images/macbookPro.jpg" alt="macbookPro">
+                <p>Llegó la MacBook Pro más poderosa de todas. De la mano de los ultrarrápidos chips M1 Pro 
+                    y M1 Max, los primeros diseñados por Apple para profesionales, disfrutarás un rendimiento 
+                    revolucionario con una duración excepcional de la batería. </p>
             </div>
         </section>
         <section class="section-two">
-            <h2>Titulo Noticia Dos</h2>
-                <img src="Images/imagenTituloUno.png" alt="PruebaFormato">
+            <h2>Asus Rog Phone 5</h2>
+                <img src="Images/asusRogPhone5.png" alt="asusRogPhone5">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores amet blanditiis 
                     placeat eius temporibus enim voluptatum id architecto, perferendis, eaque beatae sequi nostrum soluta. 
                     Non consequuntur aliquid dolorem nisi.</p>
         </section>
         <section class="section-three">
-            <h2>Titulo Noticia Tres</h2>
-                <img src="Images/imagenTituloUno.png" alt="PruebaFormato">
+            <h2>La criptomoneda de ethereum en la lucha por recuperar su valor</h2>
+                <img src="Images/ethereum.jpg" alt="ethereum">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores amet blanditiis placeat 
                     eius temporibus enim voluptatum id architecto, perferendis, eaque beatae sequi nostrum soluta. Non 
                     consequuntur aliquid dolorem nisi.</p>
         </section>
         <section class="section-four">
-            <h2>Titulo Noticia Cuatro</h2>
-                <img src="Images/imagenTituloUno.png" alt="PruebaFormato">
+            <h2>Fall Guys gratis en junio</h2>
+                <img src="Images/fallGuys.jpg" alt="fallGuys">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem maiores amet blanditiis placeat 
                     eius temporibus enim voluptatum id architecto, perferendis, eaque beatae sequi nostrum soluta. Non 
                     consequuntur aliquid dolorem nisi.</p>
         </section>
-        <footer>
-
+        <footer class="pieDePagina">
+            <h2 class="nav_logo">AllTechnology</h2>
+            <a href="login.html" alt="login" class="nav_item">Suscribirse</a>
         </footer>
     </body>
 </html>
